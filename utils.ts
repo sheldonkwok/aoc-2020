@@ -19,3 +19,7 @@ export function between(
 
   return lower <= value && value <= upper;
 }
+
+export function clone<T>(toClone: T): T {
+  return JSON.parse(JSON.stringify(toClone)) as T;
+}
